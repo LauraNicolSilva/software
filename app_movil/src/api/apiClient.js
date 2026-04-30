@@ -40,7 +40,7 @@ apiClient.interceptors.request.use(
 // Respuestas con error (4xx, 5xx) /red extrae el mensaje del backend 
 // Si existe si no usa el mensaje de axios o un mensaje generico
 
-appClient.interceptors.response.use(
+apiClient.interceptors.response.use(
     (response) => response,
     (error) => {
         const backendMessage = error.response.data?.message; //Mensaje del servidor
